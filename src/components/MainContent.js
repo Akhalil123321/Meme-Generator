@@ -2,7 +2,7 @@ import React from 'react';
 import domtoimage from 'dom-to-image';
 export default function MainContent(){
         const [meme, setMeme] = React.useState({
-            img:"http://i.imgflip.com/1bij.jpg",
+            img:"",
             topText:'',
             bottomText:''
         })
@@ -23,6 +23,7 @@ export default function MainContent(){
             const randomNumber =Math.floor(Math.random() * allMemes.length)
             document.querySelector('.input-form1').value=''
             document.querySelector('.input-form2').value=''
+            document.querySelector('.meme-btn').textContent='Get a new meme image 🖼'
         setMeme(prevMeme=>{
             return{
                 img :allMemes[randomNumber].url
@@ -64,7 +65,7 @@ export default function MainContent(){
             <button 
             className='meme-btn'
             onClick={getRandomImage}
-            >Get a new meme image 🖼</button>
+            >Get a meme image 🖼</button>
             <main className='meme-cont' ref={boxRef}>
             <h1 className='meme--text top'>{meme.topText}</h1>
             <h1 className='meme--text bottom'>{meme.bottomText}</h1>
