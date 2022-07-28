@@ -1,67 +1,78 @@
 *{
     box-sizing: border-box;
+    font-family: 'inter',sans-serif;
 }
 body{
     background-color: white;
     margin: 0;
+    width: 100%;
 }
+/* header */
 .head-container{
-    display: flex;
+display: flex;
 background-image: linear-gradient(to right ,#672280,#A626D3);
 padding: 10px 20px 10px 20px;
+height: 10vh;
 }
 .happy-face{
-    height: 30px;
+    height: 4vmin;
     margin-right: 0;
     margin: auto 5px auto 0;
 }
 .header-list1{
     list-style: none;
     display: flex;
-    margin-right: auto;
+    margin: auto auto auto 0;
+    font-size: 3vmin;
 }
+.header-list2{
+    margin: auto 0 auto auto;
+    font-size: 3vmin;
+}
+/* upper form */
 .form{
-    display: grid;
-    grid-template:40% 40% / 1fr 1fr ;
-    gap: 20px;
-    margin: 40px 10% 40px 10%;
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
 }
-.meme-btn{
-    grid-column:1 /-1 ;
-    font-size: 18px;
+.input-form1,.input-form2{
     padding: 10px;
+    font-size: 3vmin;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-family: 'Karla',sans-serif;
+    width: 40vw;
+}
+.input-form1{
+    margin: 0 0 0 auto;
+}
+.input-form2{
+    margin: 0 auto 0 0;
+}
+
+.meme-btn{
+    padding: 10px;
+    display: grid;
     border-radius: 5px;
     font-family: 'Karla',sans-serif;
     border :  1px solid black;
-    margin: auto 0 auto 0;
     background-image: linear-gradient(to right ,#672280,#A626D3 );
+    font-size: 3vmin;
+    margin: 15px auto;
+    margin-inline: auto;
+    text-align: center;
+    width: calc(80vw + 10px) ;
 }
 .meme-btn:hover{
     cursor: pointer;
     background-image: linear-gradient(to right ,#77378f,#ba4ae2 );
 }
-.input-form1,.input-form2{
-    padding: 15px;
-    font-size: 18px;
-    border-radius: 5px;
-    font-family: 'Karla',sans-serif;
-}
 
-.meme-card{
-display: flex;
-justify-content: center;
-margin: auto;
-}
-.meme-pack{
-display: block;
-justify-content: 0;
-margin: 0 auto 30px auto;
-height: 70vh;
-}
+/* mid-form */
 .meme-cont{
     justify-content: center;
-    display: flex;
     position: relative;
+    padding: 0;
 }
 .meme--text{
     text-align: center;
@@ -70,7 +81,6 @@ height: 70vh;
     transform: translateX(-50%);
     align-items: center;
     position: absolute;
-    font-size: 2em;
     text-transform: uppercase;
     color: white;
     letter-spacing: 2px;    
@@ -85,11 +95,59 @@ height: 70vh;
         0 -2px 0 #000,
         -2px 0 0 #000,
         2px 2px 5px #000;
-    font-size: 7vh;
+    font-size: 4vmax;
+width: calc(80vmin + 10px) ;
 }
 .top{
     top:5px;
 }
 .bottom{
-    bottom: 10px;
+    bottom: 5px;
+}
+
+.meme-img{
+display: flex;
+justify-content: center;
+margin: 0 auto 0 auto;
+width: calc(80vw + 10px) ;
+max-width: 800px;
+}
+
+.download-btn-cont{
+    display: flex;
+    gap: 10px;
+}
+
+.download-btn, .export-btn{
+border: 1px solid black;
+text-decoration: none;
+color: black;
+padding: 10px;
+font-size: 3vmin;
+border-radius: 5px;
+width: 40vw;
+text-align: center;
+}
+.download-btn{
+    margin: 20px auto 0 0;
+    background-image: linear-gradient(to right, #A626D3, #672280 );
+}
+.download-btn:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right, #ba4ae2, #77378f );
+}
+.export-btn{
+margin: 20px 0 0 auto;
+background-image: linear-gradient(to right ,#672280,#A626D3 );
+}
+.export-btn:hover{
+    cursor: pointer;
+    background-image: linear-gradient(to right ,#77378f,#ba4ae2 );
+}
+
+.instruction{
+    text-align: center;
+    font-size: 4vmin ;
+    color: #8920af;
+    margin: 20px auto 10px auto;
 }
